@@ -1,4 +1,4 @@
-class Tv {
+class TV {
   constructor(brand) {
     this.brand = brand
     this.channel = 1
@@ -39,7 +39,7 @@ class Tv {
 
 }
 
-const toshiba = new Tv("toshiba")
+const toshiba = new TV("toshiba")
 
 toshiba.volumeLess(25)
 toshiba.chaineChange(6)

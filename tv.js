@@ -5,26 +5,25 @@ class TV {
     this.volume = 50
   }
 
-  volumePlus(num){
+  volumeUp(num){
     this.volume += num
+
     if (this.volume > 100){
       this.volume = 100
     }
   }
 
-  volumeLess(num){
+  volumeDown(num){
     this.volume -= num
+
     if (this.volume < 0){
       this.volume = 0
     }
   }
 
-  chaineChange(num){
-    this.channel += num
-    if (this.channel < 1){
-      this.channel = 1
-    } else if (this.channel > 50){
-      this.channel = 50
+  chaineChange(channel){
+    if (channel < 50 && channel > 0) {
+      this.channel = channel
     }
   }
 
@@ -41,12 +40,11 @@ class TV {
 
 const toshiba = new TV("toshiba")
 
-toshiba.volumeLess(25)
-toshiba.chaineChange(6)
+toshiba.volumeDown(25)
+toshiba.chaineChange(9)
 toshiba.describe()
-toshiba.volumePlus(5)
-toshiba.chaineChange(-2)
+toshiba.volumeUp(5)
+toshiba.chaineChange(25)
 toshiba.describe()
 toshiba.reset()
 toshiba.describe()
-
